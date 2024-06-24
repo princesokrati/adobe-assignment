@@ -96,7 +96,7 @@ const PLPController = {
         try{
             document.querySelector('#loadMoreProducts').addEventListener('click', function(){
                 itemsPerPage = 20;
-                currentPage = 1;
+                PLPController.getProducts();
                 PLPController.filterProducts();
                 PLPController.displayProducts(currentPage);
                 // PLPController.setupPagination();
@@ -109,6 +109,7 @@ const PLPController = {
             document.querySelector('#resetProducts').addEventListener('click', function(){
                 itemsPerPage = 10;
                 currentPage = 1;
+                PLPController.getProducts();
                 PLPController.filterProducts();
                 PLPController.displayProducts(currentPage);
                 // PLPController.setupPagination();
@@ -173,7 +174,7 @@ const PLPController = {
     },
     async getProducts() {
         try {
-            const URL = 'https://fakestoreapi.com/products';
+            const URL = `https://fakestoreapi.com/products?limit=${itemsPerPage}`;
             let response = await fetch(URL);
             products = await response.json();
             PLPController.filterProducts();
@@ -228,7 +229,7 @@ const PLPController = {
             </li>
             `;
         }
-        document.getElementById('productListing').innerHTML = productHTML;
+        document.getElementById('productList').innerHTML = productHTML;
     },
     setupPagination() {
         const paginationList = document.querySelector('.product__pagination');
