@@ -1,14 +1,4 @@
-import "./styles.css";
-import './script';
-import banner from './assets/images/banner.png';
-import cartIcon from './assets/images/market.png';
-import search from './assets/images/search.png';
-import slider from './assets/images/sliders.svg'
-import instagram from './assets/images/instagram.svg';
-import facebook from './assets/images/facebook.svg';
-import twitter from './assets/images/twitter.svg';
-
-document.getElementById("app").innerHTML = `
+document.getElementById("app").innerHTML=`
 <body>
     <!-- Header Start -->
     <header role="header">
@@ -42,7 +32,7 @@ document.getElementById("app").innerHTML = `
                 <ul class="header__ex-link-list">
                     <li class="header__ex-link-item">
                         <a href="javascript:void(0)" class="header__nav-cart" aria-label="Cart with 10 items">
-                            <img src="${cartIcon}" alt="Cart Icon" class="header__icon-img">
+                            <img src="assets/images/market.png" alt="Cart Icon" class="header__icon-img">
                             <span class="header__active-count">10</span>
                         </a> 
                     </li>
@@ -61,13 +51,13 @@ document.getElementById("app").innerHTML = `
                         <h1 class="banner__title">Men's Outerwear</h1>
                     </div>
                     <div class="banner__image-wrapper">
-                        <img src="${banner}" alt="Men's Outerwear" class="banner__image">
+                        <img src="assets/images/banner.png" alt="Men's Outerwear" class="banner__image">
 
                         <div class="header__search">
                             <div class="search_input-wrap">
                                 <input id="search-input" type="text" placeholder="Search" class="s-input">
                                 <button class="icon-search s-btn">
-                                    <img src="${search}" alt="Cart Icon" class="header__search-img">
+                                    <img src="assets/images/search.png" alt="Cart Icon" class="header__search-img">
                                 </button>
                             </div>
                         </div>
@@ -143,14 +133,14 @@ document.getElementById("app").innerHTML = `
                                         <ul class="product__product-group">
                                             <li class="product__product-block">
                                                 <button class="product__product-icon js-mobile-filter" aria-label="Filter Results">
-                                                    <img src="${slider}" class="icon-slide" alt="Filter Icon"/>
+                                                    <img src="assets/images/sliders.svg" class="icon-slide" alt="Filter Icon"/>
                                                     <span class="product__icon-label">Filter Results</span>
                                                 </button>
                                             </li>
                                             <li class="product__product-block">
                                                 <div class="product__product-sort">
                                                     <label for="sorting" class="visually-hidden" id="sortingLabel">
-                                                        <img src="${slider}" class="icon-slide2" alt="Sort Icon"/>
+                                                        <img src="assets/images/sliders.svg" class="icon-slide2" alt="Sort Icon"/>
                                                         Sort by
                                                     </label>
                                                     <select class="product__product-select" name="sort" id="sorting">
@@ -165,9 +155,9 @@ document.getElementById("app").innerHTML = `
                                     <ul class="product__product-list" id="productList">
                                     </ul>                                                               
                                     <div class="product__readMoreBtn-wrap">
-                                        <!-- <ul class="product__pagination"> -->
+                                        <ul class="product__pagination">
                                             <!-- Pagination buttons will be injected here by JavaScript -->
-                                        <!-- </ul>   -->
+                                        </ul>  
                                         <button id="loadMoreProducts" class="btn btn-default product__readMoreBtn">Load More</button>
                                         <button id="resetProducts" style="display:none" class="btn btn-default product__readMoreBtn">Reset</button>
                                     </div>      
@@ -216,9 +206,9 @@ document.getElementById("app").innerHTML = `
               <h3 class="footer__heading">Follow Us!</h3>
               <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
               <ul class="footer__social-list">
-                <li class="footer__social-list-item"><a href="javascript:void(0)" class="footer__social-link"><img src="${instagram}" alt="Instagram Icon" class="footer__social-icon"></a></li>
-                <li class="footer__social-list-item"><a href="javascript:void(0)" class="footer__social-link"><img src="${facebook}" alt="Facebook Icon" class="footer__social-icon"></a></li>
-                <li class="footer__social-list-item"><a href="javascript:void(0)" class="footer__social-link"><img src="${twitter}" alt="Twitter Icon" class="footer__social-icon"></a></li>
+                <li class="footer__social-list-item"><a href="javascript:void(0)" class="footer__social-link"><img src="assets/images/instagram.svg" alt="Instagram Icon" class="footer__social-icon"></a></li>
+                <li class="footer__social-list-item"><a href="javascript:void(0)" class="footer__social-link"><img src="assets/images/facebook.svg" alt="Facebook Icon" class="footer__social-icon"></a></li>
+                <li class="footer__social-list-item"><a href="javascript:void(0)" class="footer__social-link"><img src="assets/images/twitter.svg" alt="Twitter Icon" class="footer__social-icon"></a></li>
               </ul>
             </li>
           </ul>
@@ -230,7 +220,7 @@ document.getElementById("app").innerHTML = `
                         <a href="javascript:void(0)" class="footer__logo-link">VENIA</a>
                     </div>
                     <div class="footer__info-item footer__copyright">
-                        <p class="footer__copyright-text">© Company Name Address Ave, City Name, State ZIP</p>
+                        <p class="footer__copyright-text">\xa9 Company Name Address Ave, City Name, State ZIP</p>
                     </div>
                     <ul class="footer__info-item footer__links">
                         <li class="footer__links-item"><a href="javascript:void(0)" class="footer__link">Terms of Use</a></li>
@@ -243,7 +233,9 @@ document.getElementById("app").innerHTML = `
     <!-- Footer end -->
 
     <!-- build:js assets/js/custom.min.js -->
+    <script src="script.js"></script>
     <!-- endbuild -->
 
 </body>
 `;
+//# sourceMappingURL=index.01554167.js.map
